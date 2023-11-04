@@ -1,0 +1,228 @@
+/* #99A98F
+#C1D0B5
+#D6E8DB
+#FFF8DE
+
+#73A9AD - font
+#90C8AC - back */
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* ::-webkit-scrollbar-track {
+    background: #FFF8DE;
+} */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+header {
+    background-color: #FFF8DE;
+}
+
+header nav {
+    list-style-type: none;
+    display: grid;
+}
+
+header nav div.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+header nav div.nav-links li {
+    width: 14px;
+    height: 14px;
+    padding: 1rem;
+    margin: 1rem;
+    /* border: 2px solid #1f384e; */
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px 0px rgba(144, 200, 172, 0.51) inset;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+}
+
+header nav div.nav-links li:hover {
+    box-shadow: 0px 0px 7px 0px rgba(31, 56, 78, 0.51);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+header .row {
+    display: flex;
+    align-items: center;
+    margin: 2rem 6rem;
+    /* background-color: azure; */
+}
+
+header .row div {
+    padding: 2rem;
+}
+
+header .row div.name-div {
+    width: 40%;
+    transform: translate(0%, -25%);
+}
+
+.loaded-text {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.13px;
+}
+
+header .row div.name-div li h1 {
+    font-family: 'Cormorant Garamond';
+    font-weight: 600;
+}
+
+.company {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+header .row div.description-div {
+    padding: 2rem;
+    width: 60%;
+    text-align: justify;
+    height: 386px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .row div p {
+    text-align: justify;
+}
+
+header .row div li {
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.text-animation {
+    /* background-color: #1f384e; */
+    border-radius: 4px;
+    border: 1px solid #1f384e;
+    height: 18px;
+    margin: 0 0 4px;
+    position: relative;
+    display: inline-block;
+    /* animation: text-flow 4s infinite; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #1f384e 8%, #dadde1 18%, #1f384e 33%);
+    background-size: 800px 104px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -800px 0;
+    }
+
+    100% {
+        background-position: 800px 0;
+        background: #1f384e !important;
+    }
+}
+
+.text-animation-one {
+    width: 70px;
+}
+
+.text-animation-second {
+    width: 100px;
+}
+
+.text-animation-third {
+    width: 150px;
+}
+
+.finished-shimmer {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.finished-shimmer-none {
+    display: none;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.show-more {
+    color: rgb(46, 46, 240);
+    cursor: pointer;
+}
+
+.scroll-down {
+    width: 100%;
+    text-align: center;
+}
+
+.scroll-down div span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #90C8AC;
+    cursor: pointer;
+    animation-name: scroll-down;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+
+    }
+}
+
+section {
+    width: 100%;
+    height: 600px;
+}
