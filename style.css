@@ -207,6 +207,8 @@ header .row div li {
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    position: absolute;
+    bottom: 0;
 
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
